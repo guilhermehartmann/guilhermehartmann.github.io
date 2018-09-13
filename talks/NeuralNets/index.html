@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Neural Networks</title>
+
+		<meta name="description" content="New Development in Neural Networks">
+		<meta name="author" content="Guilherme Hartmann">
+	  <meta name="company" content="Hartmann AI">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Pragmatic AI</h1>
+					<h3><small>What you need to know and how to start.</small></h3>
+					<p>
+						<small>Created by <a href="http://guilhermehartmann.github.io/">Guilherme Hartmann</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Motivation</h2>
+					<p>
+						<small>Why Pragmatic AI?</small>
+					</p>
+					<ul>
+						<li>What is AI?</li>
+						<li>What do I need to know?</li>
+						<li>How to start?</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>What do you mean about AI?</h2>
+						<ul>
+							<li>Machine Learning and Adaptive Learning</li>
+							<li>Artificial Intelligence aka Weak AI</li>
+							<li>Artificial General Intelligence aka Strong AI</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Machine Learning</h2>
+						<p>
+							<small>Fitting values</small>
+						</p>
+						<img width="402" height="362" data-src="images/pi.png">
+					</section>
+
+					<section>
+						<h2>Artificial Intelligence</h2>
+						<p>
+							<small>Black Box Learning</small>
+						</p>
+						<img width="800" height="469" data-src="images/deeplearn.png">
+					</section>
+
+					<section>
+						<h2>AGI Complexity</h2>
+						<p>
+							<small>Why is it funny ?</small>
+						</p>
+						<img width="675" height="450" data-src="images/obamafunny.jpg">
+						<p>
+							<small>Undestanding of Gravity and Mechinal Scales</small>
+						</p>
+					</section>
+
+					<section>
+						<h2>Realtime Speech</h2>
+						<p>
+							<small>Recognition / Translation</small>
+							<br>
+							<small>Siri / Google Now / Cortana</small>
+						</p>
+						<img width="814" height="404" data-src="images/speech-fft.jpeg">
+					</section>
+
+					<section>
+						<h2>Image Recognition</h2>
+						<img width="1418" height="478" data-src="images/recognition.jpg">
+					</section>
+
+					<section>
+						<h2>AlphaGo</h2>
+						<img width="921" height="504" data-src="images/alphago.jpeg">
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Still a green field</h2>
+						<img width="514" height="319" data-src="images/green.jpeg">
+						<p>
+							<small>Great opportunity for innovation</small>
+						</p>
+					</section>
+					<section>
+						<h2>Recent Breakthrough</h2>
+						<img width="746" height="442" data-src="images/googleBrain.jpg">
+						<p>
+							<small>Meet Google Brain - State of the art late 2012</small>
+						<br>
+							<small>16000 CPU cores - 1G (3-5 days)</small>
+						</p>
+					</section>
+					<section>
+						<h2>Accellerated Nets</h2>
+						<img width="738" height="450" data-src="images/hpcgpu.jpg">
+						<p>
+							<small>3 Machines - 1G (2 days) / 16 Machines - 16G (3-5 days) - Middle of 2013</small>
+							<br>
+							<small>Deep Learning with COTS HPC Systems - http://jmlr.org/proceedings/papers/v28/coates13.pdf</small>
+						</p>
+					</section>
+					<section>
+						<h2>Hobby AI</h2>
+						<img width="824" height="483" data-src="images/hobby.jpeg">
+						<small>
+							<ul>
+								<li>No longer AI is reserved for the large companies</li>
+								<li>Anyone with a PC can experiment and work with it</li>
+								<li>Virtually unlimited applications</li>
+ 							</ul>
+					 </small>
+				 	</section>
+					<section>
+						<h2>Mobile AI</h2>
+						<img width="760" height="507" data-src="images/homecourt.jpg">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Looking behind the Curtain</h2>
+						<p><small>Neural Networks</small></p>
+						<img width="573" height="396" data-src="images/neuralnets.gif">
+					</section>
+					<section>
+						<h2>Neuron</h2>
+						<img width="553" height="279" data-src="images/NN2.png">
+					</section>
+					<section>
+						<h2>Loss Function and Learning</h2>
+						<small>Back Propagation</small>
+						<br>
+						<img width="384" height="288" data-src="images/descent_v1.gif">
+					</section>
+					<section>
+						<h2>Network</h2>
+						<p>
+							<small>Interconnected Neurons become a black box parsing generic inputs and outputs</small>
+						</p>
+						<img width="696" height="412" data-src="images/deep3.jpeg">
+					</section>
+					<section>
+						<h2>Sample Deep Network</h2>
+						<img width="746" height="442" data-src="images/LeNet.png">
+					</section>
+					<section>
+						<h2>Frameworks</h2>
+						<p>
+							<small>Deep Learning is now easy (or at least easier)</small>
+						</p>
+						<ul>
+							<li>pyTorch    - Facebook supported, aimed for speed</li>
+							<li>Tensorflow - Google supported, good for scalablility</li>
+							<li>Chainer    - Transparent full control</li>
+							<li>Numenta    - Timeseries</li>
+							<li>CuDNN      - Library</li>
+							<li>Caffe      - Message Passing</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hands on!</h2>
+						<img width="696" height="412" data-src="images/kungfu.jpeg">
+					</section>
+
+					<section>
+						<h2>Best use cases</h2>
+						<p>
+							<small>Choosing your problem: Complex and Hard to Model</small>
+						</p>
+						<ul>
+							<li>Image Augumentation - Snapchat</li>
+							<li>Image Processing - Cancer Research</li>
+							<li>Content Creation</li>
+							<li>Self Driving Cars</li>
+							<li>Playing Games</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Preparing for AI</h2>
+						<ul>
+							<li>Data         - Understanding the problem</li>
+							<li>Architecture - Building Blocks</li>
+							<li>Training     - Training the Brain</li>
+							<li>Inference    - Running in Production</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Data</h2>
+						<p>
+							<small>"Data is king"</small>
+						</p>
+						<ul>
+							<li>Input - Filter / Sanitise / Enrich</li>
+							<li>Output - Deciding what can be predicted</li>
+							<li>Input/Output Layers - Normalisation</li>
+							<li>Training/Testing - Split your data for validation</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Architectures</h2>
+						<small><a href="https://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png">Deep Learning Cheatsheet</a></small>
+						<img width="958" height="434" data-src="images/deep.png">
+					</section>
+
+					<section>
+						<h2>Training</h2>
+						<p>
+							<small>Fitting the model to data</small>
+						</p>
+						<p>
+							Supervised - Unsupervised - Reinforced
+						</p>
+						<ul>
+							<li>Fit</li>
+							<li>Loss</li>
+							<li>Optimizer</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Models</h2>
+						<p>
+							<small>The Brain - Architecture after Training</small>
+						</p>
+						<ul>
+							<li>Zoo - Pre-trained models</li>
+							<li>Default - Standard models</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Going Deeper</h2>
+						<img width="650" height="365" data-src="images/deeper.jpg">
+					</section>
+
+					<section>
+						<h2>Layers</h2>
+						<p>
+							<small>Individual reusable components of the network</small>
+						</p>
+						<ul>
+							<li>Data - Input/Output</li>
+							<li>Filters - Convolutions/Rectifier/Fully Connected</li>
+							<li>Temporal - LSTM</li>
+							<li>Dynamic - RNN</li>
+							<li>Activation - Rectifier/Sigmoid</li>
+							<li>Loss - Softmax</li>
+							<li>Optimizer - Gradient Descent</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Building your model</h2>
+						<p>
+							<small>Experiment with available layers understand their properties</small>
+						</p>
+						<img width="600" height="399" data-src="images/lego.jpg">
+					</section>
+				</section>
+
+				<section>
+					<h2>Research Links</h2>
+					<ul>
+						<li>Deep Learning - http://deeplearning.net</li>
+						<li>Nvidia - https://developer.nvidia.com/deep-learning</li>
+						<li>PyTorch - https://pytorch.org</li>
+						<li>Reddit - http://www.reddit.com/r/MachineLearning/</li>
+						<li>Caffe - http://caffe.berkeleyvision.org/</li>
+						<li>Numenta - http://numenta.com/</li>
+						<li>Machine Learning in general</li>
+					</ul>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						If Theme is not readable: <br>
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

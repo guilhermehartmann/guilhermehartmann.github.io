@@ -1,0 +1,31 @@
+    What is a Neural Network
+        neuron
+        loss function
+        back propagation
+        network
+            input / output
+            connecting input to output
+    Discreet Large Problems
+        Image Recognition
+        Speech Recognition
+        Training heavy - steps cheap
+    The Breakthrough
+        GPU accelerated computation
+            Google Brain vs Commodity Hardware
+        Networks aimed for GPUs
+        CuDNN
+    Networks
+        Layers
+            CNN
+            RNN
+            HTM
+            LSTM
+        Sample Networks
+            AlexNet
+            charnn
+    The Future
+        3d memory
+        internet of things - voice is the new controller
+        personal assistants
+        driverless cars
+        translations
